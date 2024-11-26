@@ -1,6 +1,6 @@
 import unittest
-from library.library.utils import Status
-from library.library.Library import Library
+from library.utils import Status
+from library.Library import Library
 from pathlib import Path
 
 
