@@ -1,8 +1,8 @@
 import json
 import os
 
-from Book import Book
-from utils import Status
+from .Book import Book
+from .utils import Status
 
 
 class Library:
@@ -123,10 +123,11 @@ class Library:
 
         book_to_id: Book | None = self.find_book_by_id(book_id)
         if book_to_id is not None:
-            book_to_id.status = status
+            book_to_id.status = str(status)
 
         # Сохраняем все книги в файл
         self.save_books()
+
         print(book_to_id.__dict__)
 
 
